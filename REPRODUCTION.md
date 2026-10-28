@@ -81,7 +81,7 @@ bash benchmark/dexgys/setup_isaacgym.sh && source .venv-isaacgym/bin/activate   
 python benchmark/dexgys/success_rate.py --pred-path $PRED --data-path $DATA --no_force --gpu 0 --parallel 8
 ```
 Prediction file of the reported run (cholab PVC):
-`/workspace/users/dmsgk724/dexgys_baseline/graspcvae/Experiments/eval/graspcvae_kl10_latest/dexter309/predictions.json`
+`/workspace/users/dmsgk724/dexgys_baseline_work/graspcvae/Experiments/eval/graspcvae_kl10_latest/dexter309/predictions.json`
 
 ### 5. Diversity (δt, δr, δq)
 
@@ -100,7 +100,7 @@ python train.py -t ./config/graspcvae.yaml --override save_root "'./Experiments/
 200 epochs take ~13 h on one GPU.
 
 Kubeflow manifests of the reported run (job names end with `-eunha`; they run from the cholab PVC working copy
-`dexgys_baseline/graspcvae`): `kubeflow/graspcvae/trainjob-graspcvae.yaml` (train + test),
+`dexgys_baseline_work/graspcvae`): `kubeflow/graspcvae/trainjob-graspcvae.yaml` (train + test),
 `kubeflow/graspcvae/evaljob-graspcvae-{metrics,diversity}.yaml`.
 
 ## How it was built
